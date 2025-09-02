@@ -4,21 +4,23 @@ export default {
     "./index.html",
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
+  darkMode: 'class', // Включаем поддержку тем через класс
   theme: {
     extend: {
       colors: {
-        bg: '#070712',
-        surface: '#0F1724',
-        card: '#0B1220',
-        muted: '#98A0B3',
-        text: '#E6EDF3',
-        glass: 'rgba(255,255,255,0.04)',
-        'glass-strong': 'rgba(255,255,255,0.06)',
-        primaryCyan: '#00D1FF',
-        primaryViolet: '#7B61FF',
-        accentOrange: '#FF2B00',
-        success: '#00E6A8',
-        danger: '#FF6B6B',
+        // Названия цветов соответствуют CSS переменным
+        bg: 'var(--bg)',
+        surface: 'var(--surface)',
+        card: 'var(--card)',
+        muted: 'var(--muted)',
+        text: 'var(--text)',
+        glass: 'var(--glass)',
+        'glass-strong': 'var(--glass-strong)',
+        primaryCyan: 'var(--primary-cyan)',
+        primaryViolet: 'var(--primary-violet)',
+        accentOrange: 'var(--accent-orange)',
+        success: 'var(--success)',
+        danger: 'var(--danger)',
       },
       boxShadow: {
         'card': '0 10px 30px rgba(8,15,25,0.6)',
@@ -28,7 +30,7 @@ export default {
         sans: ['Inter', 'sans-serif'],
       },
       backgroundImage: {
-        'accent-gradient': 'linear-gradient(90deg, #00D1FF, #7B61FF)',
+        'accent-gradient': 'linear-gradient(90deg, var(--primary-cyan), var(--primary-violet))',
       },
     },
   },

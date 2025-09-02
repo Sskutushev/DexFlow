@@ -2,10 +2,45 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  /* Светлая тема (по умолчанию) */
+  --bg: #F3F4F6;           /* Светло-серый фон */
+  --surface: #FFFFFF;      /* Белые карточки */
+  --card: #FFFFFF;
+  --muted: #6B7280;        /* Приглушенный текст */
+  --text: #111827;         /* Основной темный текст */
+  --glass: rgba(0,0,0,0.03);
+  --glass-strong: rgba(0,0,0,0.05);
+
+  --primary-cyan: #FF2B00;    /* Акцентный оранжевый для светлой темы */
+  --primary-violet: #E64A19;  /* Более темный оранжевый */
+  --accent-orange: #FF2B00;
+  --success: #16A34A;
+  --danger: #DC2626;
+}
+
+.dark {
+  /* Тёмная тема */
+  --bg: #070712;
+  --surface: #0F1724;
+  --card: #0B1220;
+  --muted: #98A0B3;
+  --text: #E6EDF3;
+  --glass: rgba(255,255,255,0.04);
+  --glass-strong: rgba(255,255,255,0.06);
+
+  --primary-cyan: #00D1FF;
+  --primary-violet: #7B61FF;
+  --accent-orange: #FF2B00;
+  --success: #00E6A8;
+  --danger: #FF6B6B;
+}
+
 body {
-  background-color: #070712;
-  color: #E6EDF3;
+  background-color: var(--bg);
+  color: var(--text);
   font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }

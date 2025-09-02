@@ -1,22 +1,23 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
-import Landing from './pages/Landing';
-import Exchange from './pages/Exchange';
+import Header from './components/common/Header';
+import LandingPage from './pages/LandingPage';
+import ExchangePage from './pages/ExchangePage';
+import FeedPage from './pages/FeedPage';
+import ProfilePage from './pages/ProfilePage';
 
-// Основной компонент приложения с роутингом
 function App() {
   return (
     <BrowserRouter>
-      <div className="min-h-screen bg-bg">
-        <Header />
-        <main className="container mx-auto px-4">
-          <Routes>
-            <Route path="/" element={<Landing />} />
-            <Route path="/exchange" element={<Exchange />} />
-          </Routes>
-        </main>
-      </div>
+      <Header />
+      <main className="container mx-auto px-4 pt-20">
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/exchange" element={<ExchangePage />} />
+          <Route path="/feed" element={<FeedPage />} />
+          <Route path="/profile/:address" element={<ProfilePage />} />
+        </Routes>
+      </main>
     </BrowserRouter>
   );
 }
