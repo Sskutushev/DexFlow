@@ -13,8 +13,8 @@ const FAQItem = ({ question, children }) => {
   );
 };
 
-const FAQ = () => (
-  <section className="py-20">
+const FAQ = React.forwardRef((props, ref) => { return (
+  <section ref={ref} className="py-20">
     <div className="container mx-auto w-[1240px]">
       <h2 className="text-3xl font-bold text-center mb-8">Часто задаваемые вопросы</h2>
       <div className="bg-surface p-6 rounded-lg">
@@ -30,6 +30,6 @@ const FAQ = () => (
       </div>
     </div>
   </section>
-);
+); });
 
 export default FAQ;

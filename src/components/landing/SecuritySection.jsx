@@ -1,7 +1,7 @@
 import React from 'react';
 
-const SecuritySection = () => (
-    <section className="py-20">
+const SecuritySection = React.forwardRef((props, ref) => { return (
+    <section ref={ref} className="py-20">
         <div className="container mx-auto w-[1240px] text-center">
             <h2 className="text-3xl font-bold mb-12">Безопасность на первом месте</h2>
             {/* Здесь будет более сложный компонент секции безопасности */}
@@ -10,6 +10,6 @@ const SecuritySection = () => (
             </div>
         </div>
     </section>
-);
+); });
 
 export default SecuritySection;

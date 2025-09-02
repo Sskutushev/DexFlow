@@ -6,7 +6,7 @@ const Hero = React.forwardRef((props, ref) => {
   const [isModalOpen, setIsModalOpen] = React.useState(false);
 
   return (
-    <section ref={ref} className="py-20 sm:py-32 mt-[100px] min-h-screen">
+    <section ref={ref} className="py-20 sm:py-32 mt-[100px] min-h-screen mb-[-50px]">
       <div className="container mx-auto flex items-center justify-between gap-x-[50px]">
         <div className="ml-[175px] text-left">
           <h1 className="text-4xl sm:text-6xl font-extrabold text-text max-w-4xl">

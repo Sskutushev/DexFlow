@@ -8,23 +8,25 @@ const Step = ({ number, title, children }) => (
   </div>
 );
 
-const HowItWorks = React.forwardRef((props, ref) => { return (
-  <section ref={ref} className="py-20 min-h-screen">
-    <div className="container mx-auto w-[1240px] text-center">
-      <h2 className="text-3xl font-bold mb-12 text-text">Начать просто</h2>
-      <div className="grid md:grid-cols-3 gap-12 text-left max-w-5xl mx-auto">
-        <Step number="1" title="Подключите кошелёк">
-          Нажмите на кнопку подключения и выберите ваш любимый кошелёк. Никаких регистраций и личных данных.
-        </Step>
-        <Step number="2" title="Выберите актив">
-          Найдите нужную торговую пару для обмена или вложения в пул ликвидности.
-        </Step>
-        <Step number="3" title="Совершите операцию">
-          Подпишите транзакцию в кошельке для завершения обмена. Всегда безопасно и под вашим контролем.
-        </Step>
+const HowItWorks = React.forwardRef((props, ref) => {
+  return (
+    <section ref={ref} className="h-[650px] relative overflow-hidden mb-[-350px]">
+      <div className="container mx-auto w-[1240px] text-center">
+        <h2 className="text-3xl font-bold mb-12 text-text">Начать просто</h2>
+        <div className="grid md:grid-cols-3 gap-12 text-left max-w-5xl mx-auto relative z-10">
+          <Step number="1" title="Подключите кошелёк">
+            Нажмите на кнопку подключения и выберите ваш любимый кошелёк. Никаких регистраций и личных данных.
+          </Step>
+          <Step number="2" title="Выберите актив">
+            Найдите нужную торговую пару для обмена или вложения в пул ликвидности.
+          </Step>
+          <Step number="3" title="Совершите операцию">
+            Подпишите транзакцию в кошельке для завершения обмена. Всегда безопасно и под вашим контролем.
+          </Step>
+        </div>
       </div>
-    </div>
-  </section>
-); });
+    </section>
+  );
+});
 
 export default HowItWorks;
