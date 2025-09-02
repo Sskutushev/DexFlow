@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Цветовая палитра */
+  --primary-500: #4A90E2; /* Основной синий */
+  --primary-600: #357ABD;
+  --accent-500: #F5A623;  /* Акцентный оранжевый */
+  --accent-600: #DE911E;
+  --success-500: #7ED321; /* Успех */
+  --error-500: #D0021B;   /* Ошибка */
+
+  --dark-900: #121212;    /* Фон */
+  --dark-800: #1E1E1E;    /* Поверхность (карточки) */
+  --dark-700: #2A2A2A;    /* Панели, модальные окна */
+  --dark-600: #3C3C3C;    /* Границы, разделители */
+
+  --text-primary: #FFFFFF;
+  --text-secondary: #B0B0B0;
+  --text-tertiary: #757575;
+
+  /* Градиент */
+  --hero-gradient: linear-gradient(135deg, var(--primary-500) 0%, var(--accent-500) 100%);
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
