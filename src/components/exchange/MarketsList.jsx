@@ -5,14 +5,14 @@ const MarketsList = ({ onSelectPair }) => {
   const pairs = getMarketPairs();
 
   return (
-    <div className="bg-surface rounded-lg p-4 h-full">
+    <div className="bg-surface rounded-lg p-4 flex flex-col h-full">
       <h2 className="text-lg font-bold mb-4">Рынки</h2>
-      <div className="space-y-2">
+      <div className="space-y-2 flex-grow overflow-y-auto custom-scrollbar pr-2 max-h-[700px]">
         {pairs.map((pair) => (
           <div 
             key={pair.id} 
             className="flex justify-between items-center p-2 rounded-md hover:bg-glass-strong cursor-pointer"
-            onClick={() => onSelectPair(pair.name)}
+            onClick={() => onSelectPair(pair.id)}
           >
             <span className="font-medium text-sm">{pair.name}</span>
             <span className={`text-sm font-mono ${pair.change24h > 0 ? 'text-success' : 'text-danger'}`}>

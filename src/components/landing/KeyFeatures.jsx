@@ -10,16 +10,18 @@ const FeatureCard = ({ icon, title, children }) => (
 
 const KeyFeatures = () => (
   <section className="py-20">
-    <div className="grid md:grid-cols-3 gap-8">
-      <FeatureCard icon="/assets/icons/ic-shield.svg" title="Безопасность превыше всего">
-        Полный контроль над вашими активами. Все операции подтверждаются только в вашем кошельке.
-      </FeatureCard>
-      <FeatureCard icon="/assets/icons/ic-swap.svg" title="Мгновенный обмен">
-        Лучшие курсы обмена благодаря агрегации ликвидности из нескольких источников.
-      </FeatureCard>
-      <FeatureCard icon="/assets/icons/ic-chart.svg" title="Анализируйте рынок">
-        Используйте встроенные инструменты для анализа и принимайте взвешенные торговые решения.
-      </FeatureCard>
+    <div className="container mx-auto w-[1240px]">
+      <div className="grid md:grid-cols-3 gap-8">
+        <FeatureCard icon="/assets/icons/ic-shield.svg" title="Безопасность превыше всего">
+          Полный контроль над вашими активами. Все операции подтверждаются только в вашем кошельке.
+        </FeatureCard>
+        <FeatureCard icon="/assets/icons/ic-swap.svg" title="Мгновенный обмен">
+          Лучшие курсы обмена благодаря агрегации ликвидности из нескольких источников.
+        </FeatureCard>
+        <FeatureCard icon="/assets/icons/ic-chart.svg" title="Анализируйте рынок">
+          Используйте встроенные инструменты для анализа и принимайте взвешенные торговые решения.
+        </FeatureCard>
+      </div>
     </div>
   </section>
 );

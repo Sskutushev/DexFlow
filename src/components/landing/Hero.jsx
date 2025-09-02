@@ -1,20 +1,34 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import ConnectWalletModal from '../common/ConnectWalletModal';
 
-const Hero = () => (
-  <section className="text-center py-20 sm:py-32">
-    <h1 className="text-4xl sm:text-6xl font-extrabold text-text max-w-4xl mx-auto">
-      Будущее децентрализованных финансов. <span className="bg-accent-gradient bg-clip-text text-transparent">Уже здесь.</span>
-    </h1>
-    <p className="text-lg text-muted max-w-2xl mx-auto mt-6">
-      DexFlow — это сверхбыстрая и безопасная DEX. Торгуйте, общайтесь и инвестируйте без посредников на рынке РФ и СНГ.
-    </p>
-    <Link to="/exchange">
-      <button className="mt-10 bg-accent-gradient text-white font-semibold py-3 px-8 rounded-lg shadow-lg hover:opacity-90 transition-opacity">
-        Начать торговать
-      </button>
-    </Link>
-  </section>
-);
+const Hero = React.forwardRef((props, ref) => {
+  const [isModalOpen, setIsModalOpen] = React.useState(false);
+
+  return (
+    <section ref={ref} className="py-20 sm:py-32 mt-[100px] min-h-screen">
+      <div className="container mx-auto flex items-center justify-between gap-x-[50px]">
+        <div className="ml-[175px] text-left">
+          <h1 className="text-4xl sm:text-6xl font-extrabold text-text max-w-4xl">
+            Будущее<br />децентрализованных<br />финансов.<br /><span className="bg-accent-gradient bg-clip-text text-transparent">Уже здесь.</span>
+          </h1>
+          <p className="text-lg text-muted max-w-2xl mt-6">
+            DexFlow — это сверхбыстрая и безопасная DEX. Торгуйте, общайтесь и инвестируйте без посредников на рынке РФ и СНГ.
+          </p>
+          <button 
+            className="mt-10 bg-accent-gradient text-white font-semibold py-3 px-8 rounded-full shadow-lg hover:opacity-90 transition-opacity"
+            onClick={() => setIsModalOpen(true)}
+          >
+            Начать торговать
+          </button>
+        </div>
+        <div className="flex-shrink-0">
+          <img src="/Frame 6850.svg" alt="Hero Illustration" className="w-[585px] h-[445px]" />
+        </div>
+      </div>
+      <ConnectWalletModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />
+    </section>
+  );
+});
 
 export default Hero;
