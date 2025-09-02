@@ -1,53 +1,29 @@
 import React from 'react';
-import { NavLink, Link } from 'react-router-dom';
-import WalletPanel from './WalletPanel';
+import { Link, NavLink } from 'react-router-dom';
 
-const navigation = [
-  { name: 'Обмен', href: '/app' },
-  { name: 'Пулы', href: '/app/pools' },
-  { name: 'Ордера', href: '/app/orders' },
-];
-
-function Header() {
+// Компонент Header для навигации по приложению
+const Header = () => {
   return (
-    <header className="bg-dark-surface/80 backdrop-blur-sm sticky top-0 z-50">
-      <nav className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
-          <div className="flex items-center">
-            <Link to="/" className="flex-shrink-0 text-white font-bold text-xl">
-              Dex<span className="text-brand-primary">Flow</span>
-            </Link>
-            <div className="hidden md:block">
-              <div className="ml-10 flex items-baseline space-x-4">
-                {navigation.map((item) => (
-                  <NavLink
-                    key={item.name}
-                    to={item.href}
-                    end={item.href === '/app'} // `end` prop for the root app link
-                    className={({ isActive }) =>
-                      `px-3 py-2 rounded-md text-sm font-medium ${
-                        isActive
-                          ? 'bg-dark-900 text-white'
-                          : 'text-text-secondary hover:bg-dark-700 hover:text-white'
-                      }`
-                    }
-                  >
-                    {item.name}
-                  </NavLink>
-                ))}
-              </div>
-            </div>
-          </div>
-          <div className="hidden md:block">
-            <WalletPanel />
-          </div>
-          <div className="md:hidden">
-            {/* Mobile menu button */}
+    <header className="sticky top-0 z-50 bg-surface/80 backdrop-blur-lg">
+      <div className="container mx-auto px-4">
+        <div className="flex items-center justify-between h-16 border-b border-glass-strong">
+          <Link to="/" className="text-2xl font-bold text-text">
+            Dex<span className="bg-accent-gradient bg-clip-text text-transparent">Flow</span>
+          </Link>
+          <div className="flex items-center space-x-4">
+            <NavLink to="/exchange" className={({ isActive }) => 
+              `text-sm font-medium ${isActive ? 'text-text' : 'text-muted hover:text-text'}`
+            }>
+              Биржа
+            </NavLink>
+            <button className="bg-accent-gradient text-white text-sm font-semibold py-2 px-4 rounded-lg hover:opacity-90 transition-opacity">
+              Подключить кошелёк
+            </button>
           </div>
         </div>
-      </nav>
+      </div>
     </header>
   );
-}
+};
 
 export default Header;

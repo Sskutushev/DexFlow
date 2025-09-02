@@ -7,23 +7,29 @@ export default {
   theme: {
     extend: {
       colors: {
-        'brand-primary': 'var(--primary-500)',
-        'brand-accent': 'var(--accent-500)',
-        'dark-bg': 'var(--dark-900)',
-        'dark-surface': 'var(--dark-800)',
-        'dark-panel': 'var(--dark-700)',
-        'text-primary': 'var(--text-primary)',
-        'text-secondary': 'var(--text-secondary)',
-        'text-tertiary': 'var(--text-tertiary)',
-        'success-500': 'var(--success-500)',
-        'error-500': 'var(--error-500)',
+        bg: '#070712',
+        surface: '#0F1724',
+        card: '#0B1220',
+        muted: '#98A0B3',
+        text: '#E6EDF3',
+        glass: 'rgba(255,255,255,0.04)',
+        'glass-strong': 'rgba(255,255,255,0.06)',
+        primaryCyan: '#00D1FF',
+        primaryViolet: '#7B61FF',
+        accentOrange: '#FF2B00',
+        success: '#00E6A8',
+        danger: '#FF6B6B',
+      },
+      boxShadow: {
+        'card': '0 10px 30px rgba(8,15,25,0.6)',
+        'glow-cyan': '0 0 15px rgba(0, 209, 255, 0.3)',
       },
       fontFamily: {
         sans: ['Inter', 'sans-serif'],
       },
       backgroundImage: {
-        'hero-gradient': 'var(--hero-gradient)',
-      }
+        'accent-gradient': 'linear-gradient(90deg, #00D1FF, #7B61FF)',
+      },
     },
   },
   plugins: [],

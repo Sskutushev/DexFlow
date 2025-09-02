@@ -1,0 +1,307 @@
+Конечно. Вот полный и структурированный промпт для Gemini CLI, основанный на предоставленном тобой документе.
+
+Этот промпт можно скопировать и вставить напрямую в интерфейс командной строки. Он содержит все детали: от структуры проекта и цветовой палитры до текстов на русском языке и логики пользовательских потоков.
+
+-----
+
+### Промпт для Gemini CLI
+
+````prompt
+Act as an expert full-stack developer specializing in React, Vite, and Tailwind CSS. Your task is to generate a complete project skeleton for a decentralized exchange (DEX) platform called "DexFlow". Follow the detailed specifications below precisely.
+
+Generate all specified files with their complete code. The output should be a series of clearly marked code blocks, one for each file, starting with the file path (e.g., `// FILE: tailwind.config.js`). Use Russian language for all UI text, comments, and copy as specified.
+
+**## 1. Project Goal & Core Concept**
+
+- **Product:** A landing page and core trading interface for a DEX named "DexFlow".
+- **Visual Style:** A dark, technological theme inspired by "DexNet", featuring light-colored content cards, a primary neon gradient accent (cyan to violet), and bright orange 3D illustrations for branding.
+- **UX Focus:** Simple "connect wallet and trade" flow, initially without a real backend (use mock data).
+- **Target Audience:** Russian/CIS users.
+
+**## 2. Technical Stack & Configuration**
+
+- **Framework:** React + Vite
+- **Styling:** Tailwind CSS
+- **Language:** JavaScript (JSX)
+
+**## 3. Project Structure**
+
+Generate the following file and directory structure:
+
+/
+├── public/
+│   ├── assets/
+│   │   ├── icons/
+│   │   │   ├── ic-wallet.svg
+│   │   │   ├── ic-shield.svg
+│   │   │   ├── ic-chart.svg
+│   │   │   ├── ic-swap.svg
+│   │   │   └── ic-arrow-down.svg
+│   │   └── images/
+│   │       ├── hero-illustration.webp (placeholder)
+│   │       ├── feature-secure.webp (placeholder)
+│   │       └── tokens-preview.webp (placeholder)
+├── src/
+│   ├── components/
+│   │   ├── Header.jsx
+│   │   ├── Hero.jsx
+│   │   ├── KeyFeatures.jsx
+│   │   ├── MarketsList.jsx
+│   │   ├── TVChartPlaceholder.jsx
+│   │   ├── OrderPanel.jsx
+│   │   ├── WalletConnectModal.jsx
+│   │   ├── PreviewModal.jsx
+│   │   └── Toast.jsx
+│   ├── pages/
+│   │   ├── Landing.jsx
+│   │   └── Exchange.jsx
+│   ├── services/
+│   │   ├── dexsafe-stub.js
+│   │   └── mock-api.js
+│   ├── styles/
+│   │   └── index.css
+│   ├── App.jsx
+│   └── main.jsx
+├── .gitignore
+├── index.html
+├── package.json
+├── postcss.config.js
+├── tailwind.config.js
+└── copy_ru.md
+
+**## 4. File-by-File Generation Instructions**
+
+**### `package.json`**
+Create a standard `package.json` for a Vite + React project. Include `react`, `react-dom`, `tailwindcss`, `postcss`, `autoprefixer`, and dev dependencies for Vite.
+
+**### `tailwind.config.js`**
+Configure Tailwind CSS with the specified theme, colors, and shadows.
+
+```javascript
+// FILE: tailwind.config.js
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: [
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
+  theme: {
+    extend: {
+      colors: {
+        bg: '#070712',
+        surface: '#0F1724',
+        card: '#0B1220',
+        muted: '#98A0B3',
+        text: '#E6EDF3',
+        glass: 'rgba(255,255,255,0.04)',
+        'glass-strong': 'rgba(255,255,255,0.06)',
+        primaryCyan: '#00D1FF',
+        primaryViolet: '#7B61FF',
+        accentOrange: '#FF2B00',
+        success: '#00E6A8',
+        danger: '#FF6B6B',
+      },
+      boxShadow: {
+        'card': '0 10px 30px rgba(8,15,25,0.6)',
+        'glow-cyan': '0 0 15px rgba(0, 209, 255, 0.3)',
+      },
+      fontFamily: {
+        sans: ['Inter', 'sans-serif'],
+      },
+      backgroundImage: {
+        'accent-gradient': 'linear-gradient(90deg, #00D1FF, #7B61FF)',
+      },
+    },
+  },
+  plugins: [],
+}
+````
+
+**\#\#\# `src/styles/index.css`**
+Set up the base Tailwind layers and define the root CSS variables for the color palette.
+
+```css
+/* FILE: src/styles/index.css */
+@import url('[https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap](https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap)');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg: #070712;
+    --surface: #0F1724;
+    --card: #0B1220;
+    --muted: #98A0B3;
+    --text: #E6EDF3;
+    --glass: rgba(255,255,255,0.04);
+    --glass-strong: rgba(255,255,255,0.06);
+
+    --primary-cyan: #00D1FF;
+    --primary-violet: #7B61FF;
+    --accent-orange: #FF2B00;
+    --success: #00E6A8;
+    --danger: #FF6B6B;
+  }
+  body {
+    @apply bg-bg text-text font-sans;
+  }
+}
+```
+
+**\#\#\# `src/components/*.jsx`**
+Generate placeholder components with correct structure, styling, and Russian text.
+
+**`Header.jsx`**:
+
+  - Logo on the left (can be text "DexFlow").
+  - Navigation links: "Торговля", "Ликвидность", "Ордеры".
+  - "Подключить кошелёк" button on the right with a gradient background.
+
+**`Hero.jsx`**:
+
+  - H1: `DexFlow — DEX внутри вашего кошелька`
+  - Subtitle: `Подключи DexSAFE и начни торговать на децентрализованной бирже.`
+  - Primary CTA Button (gradient): `[Войти в платформу]`
+  - Secondary CTA Button (ghost): `[Demo]`
+  - Include a placeholder `div` for `hero-illustration.webp`.
+
+**`OrderPanel.jsx`**:
+
+  - Implement tabs: `Swap`, `Limit`.
+  - **Swap Tab**: Two inputs ("From" and "To"), amount input, balance display, slippage settings, and a "Preview" button.
+  - **Limit Tab**: Inputs for "Price" and "Amount", and a "Create" button.
+  - Use the specified colors (`--card`, `--surface`).
+
+**`WalletConnectModal.jsx`**:
+
+  - Title: `Подключите кошелёк для начала`
+  - Body: `На старте поддерживается DexSAFE. В будущем — WalletConnect и другие.`
+  - Buttons: `[Открыть DexSAFE]`, `[Scan QR]`, `[Попробовать демо]`.
+  - Style it as a modal that overlays the content.
+
+**\#\#\# `src/pages/Landing.jsx`**
+Assemble the `Header` and `Hero` components to create the landing page.
+
+**\#\#\# `src/pages/Exchange.jsx`**
+Create the main trading interface layout:
+
+  - `Header` component at the top.
+  - A 3-column layout:
+      - Left column: `MarketsList` placeholder component.
+      - Center column: `TVChartPlaceholder` placeholder component.
+      - Right column: `OrderPanel` component.
+
+**\#\#\# `src/services/mock-api.js`**
+Implement the mock API functions.
+
+```javascript
+// FILE: src/services/mock-api.js
+const pairs = [
+  { pair: 'ETH/USDT', price: '3500.45', change24h: '+2.5%', vol24h: '1.2B', tvl: '850M' },
+  { pair: 'BTC/USDT', price: '65123.80', change24h: '-1.1%', vol24h: '3.5B', tvl: '2.1B' },
+  { pair: 'SOL/USDT', price: '150.12', change24h: '+5.8%', vol24h: '750M', tvl: '500M' },
+];
+
+export const getPairs = () => {
+  return new Promise(resolve => setTimeout(() => resolve(pairs), 500));
+};
+
+export const getQuote = (from, to, amount) => {
+  const quote = {
+    price: 3500.45 / 1,
+    route: [{ pool: 'Uniswap V3', share: '100%' }],
+    gasEst: '25.50',
+    minReceived: parseFloat(amount) * 3495.00,
+  };
+  return new Promise(resolve => setTimeout(() => resolve(quote), 300));
+};
+
+export const postLimitIntent = (intent) => {
+  console.log('Mock: Limit intent created', intent);
+  const response = { status: 'success', intentId: `mock_${Date.now()}` };
+  return new Promise(resolve => setTimeout(() => resolve(response), 700));
+};
+```
+
+**\#\#\# `src/services/dexsafe-stub.js`**
+Implement the DexSAFE stub functions.
+
+```javascript
+// FILE: src/services/dexsafe-stub.js
+export const connect = () => {
+  console.log('Mock: Connecting to DexSAFE...');
+  return new Promise(resolve => setTimeout(() => resolve({
+    address: '0x1234...abcd',
+    balance: '10.5 ETH'
+  }), 1500));
+};
+
+export const signTransaction = (tx) => {
+  console.log('Mock: Signing transaction...', tx);
+  return new Promise(resolve => setTimeout(() => resolve({
+    status: 'success',
+    txHash: `0x_mock_${Date.now()}`
+  }), 2000));
+};
+
+export const signMessage = (message) => {
+  console.log('Mock: Signing message...', message);
+  return new Promise(resolve => setTimeout(() => resolve({
+    status: 'success',
+    signature: `sig_mock_${Date.now()}`
+  }), 1000));
+};
+```
+
+**\#\#\# `copy_ru.md`**
+Create a markdown file with all the specified Russian UI copy.
+
+```markdown
+# FILE: copy_ru.md
+
+## Hero Section
+- **Title:** "DexFlow — DEX внутри вашего кошелька"
+- **Subtitle:** "Торгуй токенами 24/7. Подключи DexSAFE и начни прямо сейчас."
+- **CTA Primary:** "Войти в платформу"
+- **CTA Secondary:** "Попробовать демо"
+
+## Connect Modal
+- **Title:** "Подключите кошелёк"
+- **Body:** "Поддерживается DexSAFE. Выберите кошелёк для подключения."
+- **Buttons:** "Открыть DexSAFE", "Scan QR", "Попробовать демо"
+
+## Preview Modal (Swap)
+- **Title:** "Предпросмотр сделки"
+- **CTA:** "Подписать в DexSAFE"
+- **Secondary CTA:** "Редактировать"
+
+## Toasts
+- **Success:** "Транзакция подтверждена. Балансы обновлены."
+- **Pending:** "Транзакция отправлена — ожидайте подтверждения."
+- **Error:** "Транзакция не выполнена — недостаточно средств на оплату газа."
+
+## Key Features
+- **Title:** "Безопасность с DexSAFE"
+- **Description:** "Безопасные подписи и политики — DexSAFE обеспечивает полный контроль над вашими ключами."
+```
+
+**\#\#\# Placeholder SVG Icons**
+For each SVG file in `public/assets/icons/`, generate a simple, line-style placeholder icon. For example:
+
+```xml
+<svg xmlns="[http://www.w3.org/2000/svg](http://www.w3.org/2000/svg)" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12V8H6a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h12v4"/><path d="M4 6v12a2 2 0 0 0 2 2h14v-4"/><path d="M18 12a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h4a2 2 0 0 0 2-2z"/></svg>
+```
+
+**\#\# 5. Final Instructions**
+
+  - Ensure all components are functional placeholders.
+  - The primary focus is on generating the correct file structure, configuration, and boilerplate code according to the specs.
+  - The application should be runnable via `npm run dev` after generation.
+  - No complex state management is needed at this stage; use `useState` for simple component-level state where necessary (e.g., to show/hide a modal).
+
+Proceed with generating the code for each file as requested.
+
+```
+```
