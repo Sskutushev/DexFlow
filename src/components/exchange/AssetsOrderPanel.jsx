@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import InfoIcon from '../common/InfoIcon';
 
 const AssetsOrderPanel = ({ pair, isLoggedIn }) => {
   const [side, setSide] = useState('buy'); // 'buy' or 'sell'
@@ -35,6 +36,12 @@ const AssetsOrderPanel = ({ pair, isLoggedIn }) => {
       <div className="flex items-center space-x-4 mb-4">
         <button onClick={() => setOrderType('market')} className={`text-xs ${orderType === 'market' ? 'text-text font-bold' : 'text-muted'}`}>Маркет</button>
         <button onClick={() => setOrderType('limit')} className={`text-xs ${orderType === 'limit' ? 'text-text font-bold' : 'text-muted'}`}>Лимит</button>
+      </div>
+
+      {/* New Section for Tokenized Assets Info */}
+      <div className="flex items-center mb-4">
+        <h3 className="text-sm font-bold text-text">Токенизированные активы</h3>
+        <InfoIcon content="Токенизированные активы — это цифровые представления реальных активов (акций, облигаций, сырья, недвижимости) на блокчейне. Они позволяют торговать традиционными активами в децентрализованной среде, обеспечивая прозрачность, ликвидность и доступность. Торговля такими активами может нести риски, связанные как с волатильностью базового актива, так и с особенностями блокчечейн-технологий." />
       </div>
 
       {/* Inputs */}
