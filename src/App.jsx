@@ -40,8 +40,9 @@ const AppContent = () => {
 }
 
 function App() {
+  const basename = import.meta.env.PROD ? '/DexFlow' : '/';
   return (
-    <BrowserRouter basename="/DexFlow">
+    <BrowserRouter basename={basename}>
       <AppContent />
     </BrowserRouter>
   );
