@@ -3,9 +3,9 @@ import { useNavigate } from 'react-router-dom';
 
 // Mock data for wallets
 const initialWallets = [
-    { id: 'dexsafe', name: 'DexSAFE', logo: '/DexSAFE.svg' },
-    { id: 'metamask', name: 'MetaMask', logo: '/MetaMask.png' },
-    { id: 'trustwallet', name: 'Trust Wallet', logo: '/Trust-Wallet.png' },
+    { id: 'dexsafe', name: 'DexSAFE', logo: 'DexSAFE.svg' },
+    { id: 'metamask', name: 'MetaMask', logo: 'MetaMask.png' },
+    { id: 'trustwallet', name: 'Trust Wallet', logo: 'Trust-Wallet.png' },
 ];
 
 const allWallets = [
