@@ -10,7 +10,7 @@ const Hero = React.forwardRef((props, ref) => {
       <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between gap-x-8 px-4">
         <div className="text-center lg:text-left lg:ml-16 xl:ml-32">
           <h1 className="text-4xl mobile:text-5xl sm:text-6xl font-extrabold text-text max-w-4xl">
-            Будущее<br />децентрализованных<br />финансов.<br /><span className="bg-accent-gradient bg-clip-text text-transparent">Уже здесь.</span>
+            Будущее децентрализованных финансов. <span className="bg-accent-gradient bg-clip-text text-transparent">Уже здесь.</span>
           </h1>
           <p className="text-lg text-muted max-w-2xl mt-6 mx-auto lg:mx-0">
             DexFlow — это сверхбыстрая и безопасная DEX. Торгуйте, общайтесь и инвестируйте без посредников на рынке РФ и СНГ.

@@ -52,7 +52,7 @@ const CreatePost = () => {
       <div className="relative mb-2">
         <textarea 
           ref={textareaRef}
-          className="w-full bg-card p-2 rounded-md outline-none text-sm pr-10 resize-none"
+          className="w-full bg-card p-2 rounded-md outline-none text-sm pr-10 resize-y border border-glass-strong" 
           rows="3" 
           placeholder="Что нового?"
           value={postContent}

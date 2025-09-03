@@ -1,11 +1,19 @@
 import React from 'react';
 
 const OrderPanel = ({ pair, isLoggedIn }) => {
-
-  
   const [orderType, setOrderType] = React.useState('market'); // 'market' or 'limit'
   const [slippage, setSlippage] = React.useState(0.5);
   const [showSlippageInput, setShowSlippageInput] = React.useState(false);
+  const [amountGive, setAmountGive] = React.useState('');
+  const [amountReceive, setAmountReceive] = React.useState('');
+
+  const [displayGiveCurrency, setDisplayGiveCurrency] = React.useState(pair.split('/')[0]);
+  const [displayReceiveCurrency, setDisplayReceiveCurrency] = React.useState(pair.split('/')[1]);
+
+  React.useEffect(() => {
+    setDisplayGiveCurrency(pair.split('/')[0]);
+    setDisplayReceiveCurrency(pair.split('/')[1]);
+  }, [pair]);
 
   const handleSlippageChange = (e) => {
     const value = parseFloat(e.target.value);
@@ -14,31 +22,38 @@ const OrderPanel = ({ pair, isLoggedIn }) => {
     }
   };
 
+  const handleSwap = () => {
+    setDisplayGiveCurrency(displayReceiveCurrency);
+    setDisplayReceiveCurrency(displayGiveCurrency);
+    setAmountGive(amountReceive);
+    setAmountReceive(amountGive);
+  };
+
   return (
     <div className="bg-surface rounded-lg p-4 flex flex-col h-auto lg:h-full">
       <h2 className="text-lg font-bold mb-4">Обмен {pair}</h2>
-      <div className="space-y-4 flex-grow overflow-y-auto custom-scrollbar pr-2">
+      <div className="space-y-2 sm:space-y-4 flex-grow pr-2">
         <div>
           <label className="text-xs text-muted">Отдаете</label>
-          <div className="flex items-center bg-card p-3 rounded-lg mt-1">
-            <input type="text" placeholder="0.0" className="bg-transparent w-full text-xl outline-none" />
-            <button className="bg-glass-strong px-3 py-1 rounded-md text-sm font-semibold">{pair.split('/')[0]}</button>
+          <div className="flex items-center bg-card p-2 sm:p-3 rounded-lg mt-1">
+            <input type="text" placeholder="0.0" className="bg-transparent w-full text-base sm:text-xl outline-none" value={amountGive} onChange={(e) => setAmountGive(e.target.value)} />
+            <button className="bg-glass-strong px-3 py-1 rounded-md text-sm font-semibold">{displayGiveCurrency}</button>
           </div>
         </div>
         <div className="flex justify-center">
-          <button className="p-2 rounded-full border border-glass-strong hover:bg-glass-strong">
-            <img src="/assets/icons/ic-arrow-down.svg" alt="Swap icon" className="h-5 w-5" />
+          <button onClick={handleSwap} className="p-2 rounded-full border border-glass-strong hover:bg-glass-strong">
+            <img src="/img/стрелки.png" alt="Swap arrows" className="h-5 w-5" />
           </button>
         </div>
-        <div className="mb-[-50px]">
+        <div>
           <label className="text-xs text-muted">Получаете</label>
-          <div className="flex items-center bg-card p-3 rounded-lg mt-1">
-            <input type="text" placeholder="0.0" className="bg-transparent w-full text-xl outline-none" />
-            <button className="bg-glass-strong px-3 py-1 rounded-md text-sm font-semibold">{pair.split('/')[1]}</button>
+          <div className="flex items-center bg-card p-2 sm:p-3 rounded-lg mt-1">
+            <input type="text" placeholder="0.0" className="bg-transparent w-full text-base sm:text-xl outline-none" value={amountReceive} onChange={(e) => setAmountReceive(e.target.value)} />
+            <button className="bg-glass-strong px-3 py-1 rounded-md text-sm font-semibold">{displayReceiveCurrency}</button>
           </div>
         </div>
       </div>
-      <button className="w-full bg-accent-gradient text-white font-semibold py-3 rounded-lg shadow-lg hover:opacity-90 transition-opacity">
+      <button className="w-full bg-accent-gradient text-white font-semibold py-3 rounded-lg shadow-lg hover:opacity-90 transition-opacity mt-[7px]">
         {isLoggedIn ? 'Совершить сделку' : 'Подключить кошелёк'}
       </button>
 

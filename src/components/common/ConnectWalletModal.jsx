@@ -32,7 +32,7 @@ const ConnectWalletModal = ({ isOpen, onClose }) => {
             console.log(`Connecting to ${selectedWalletId}...`);
             // Simulate connection and navigate to platform
             onClose(); // Close modal
-            navigate('/exchange'); // Navigate to a platform page
+            navigate('/home'); // Navigate to a platform page
         } else {
             // If no wallet selected on initial screen, go to all wallets
             setScreen('allWallets');

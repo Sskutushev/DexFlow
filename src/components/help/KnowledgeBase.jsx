@@ -27,7 +27,7 @@ const KnowledgeBase = () => {
                 </ul>
             </div>
             <div className="md:col-span-3 bg-surface p-8 rounded-lg mt-8 md:mt-0">
-                <h2 className="text-3xl font-bold mb-6 text-text">{selectedArticle.title}</h2>
+                <h2 className="text-2xl sm:text-3xl font-bold mb-6 text-text">{selectedArticle.title}</h2>
                 <div className="prose prose-invert prose-lg max-w-none text-muted leading-relaxed">
                     <p>{selectedArticle.content}</p>
                 </div>

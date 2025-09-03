@@ -9,15 +9,15 @@ const ExchangePage = () => {
   const isLoggedIn = true; // Mock logged-in state for now
 
   return (
-    <div className="container mx-auto pt-24 px-4 sm:px-6 lg:px-8 min-h-screen">
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-4">
-        <div className="lg:col-span-3 h-auto lg:h-[800px]">
+    <div className="container mx-auto pt-[46px] min-h-screen">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-y-0 lg:gap-4">
+        <div className="lg:col-span-3 h-[550px]">
           <MarketsList onSelectPair={setCurrentPair} />
         </div>
-        <div className="lg:col-span-6 h-[400px] lg:h-[800px] mt-4 lg:mt-0">
+        <div className="lg:col-span-6 h-[550px] mt-[25px] lg:mt-0">
           <TVChart pair={currentPair} />
         </div>
-        <div className="lg:col-span-3 h-auto lg:h-[800px] mt-4 lg:mt-0">
+        <div className="lg:col-span-3 h-[550px] mt-[25px] lg:mt-0">
           <OrderPanel pair={currentPair} isLoggedIn={isLoggedIn} />
         </div>
       </div>

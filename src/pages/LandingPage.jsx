@@ -24,7 +24,7 @@ const LandingPage = () => {
       <Hero ref={heroRef} />
       <BenefitsSection ref={benefitsRef} />
       <HowItWorks ref={howItWorksRef} />
-      <CommunityTeaser ref={communityRef} className="mt-24" />
+      <CommunityTeaser ref={communityRef} className="mt-24 mb-[-150px]" />
       <FinalCTA ref={finalCTARef} />
       <Footer /> {/* New component */}
     </div>

@@ -7,6 +7,7 @@ import ExchangePage from './pages/ExchangePage';
 import FeedPage from './pages/FeedPage';
 import ProfilePage from './pages/ProfilePage';
 import HelpCenterPage from './pages/HelpCenterPage';
+import HomePage from './pages/HomePage'; // New import
 import ConnectWalletModal from './components/common/ConnectWalletModal';
 import ScrollToTopButton from './components/common/ScrollToTopButton'; // New import
 
@@ -25,6 +26,7 @@ const AppContent = () => {
       <main className={`container mx-auto px-4 ${isLandingPage ? '' : 'pt-20'}`}>
         <Routes>
           <Route path="/" element={<LandingPage />} />
+          <Route path="/home" element={<HomePage />} /> {/* New route */}
           <Route path="/exchange" element={<ExchangePage />} />
           <Route path="/feed" element={<FeedPage />} />
           <Route path="/profile/:address" element={<ProfilePage />} />

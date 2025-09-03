@@ -1,64 +1,19 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Switch from '../common/Switch';
-import { languages } from '../landing/LanguageSwitcher'; // Import languages from LanguageSwitcher
+import PlatformLanguageSwitcher from '../common/PlatformLanguageSwitcher'; // New import
 
 const GlobalSettings = () => {
     const [name, setName] = useState(true);
     const [notifications, setNotifications] = useState(true);
     const [risk, setRisk] = useState(false);
     const [subgraph, setSubgraph] = useState(true);
-    const [selectedLanguage, setSelectedLanguage] = useState(languages[0]); // Default to Russian
-    const [isLanguageDropdownOpen, setIsLanguageDropdownOpen] = useState(false);
-    const languageDropdownRef = useRef(null);
-
-    useEffect(() => {
-        const handleClickOutside = (event) => {
-            if (languageDropdownRef.current && !languageDropdownRef.current.contains(event.target)) {
-                setIsLanguageDropdownOpen(false);
-            }
-        };
-
-        document.addEventListener('mousedown', handleClickOutside);
-        return () => {
-            document.removeEventListener('mousedown', handleClickOutside);
-        };
-    }, []);
-
-    const handleSelectLanguage = (language) => {
-        setSelectedLanguage(language);
-        setIsLanguageDropdownOpen(false);
-        console.log(`Language changed to: ${language.name}`);
-    };
 
     return (
         <div className="space-y-4 p-4">
-            <div className="flex justify-between items-center relative" ref={languageDropdownRef}>
+            <div className="flex justify-between items-center relative">
                 <label className="text-sm">Язык</label>
-                <button
-                    onClick={() => setIsLanguageDropdownOpen(!isLanguageDropdownOpen)}
-                    className="flex items-center p-2 rounded-md bg-glass hover:bg-glass-strong transition-colors"
-                >
-                    <span role="img" aria-label={`${selectedLanguage.name} flag`} className="mr-2">{selectedLanguage.flag}</span>
-                    <span className="text-sm">{selectedLanguage.name}</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" className={`h-4 w-4 ml-2 transition-transform ${isLanguageDropdownOpen ? 'rotate-180' : ''}`} viewBox="0 0 20 20" fill="currentColor">
-                        <path fillRule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clipRule="evenodd" />
-                    </svg>
-                </button>
-                {isLanguageDropdownOpen && (
-                    <div className="absolute right-0 top-full mt-2 w-40 bg-surface rounded-lg shadow-lg z-10 py-1">
-                        {languages.map((lang) => (
-                            <button
-                                key={lang.code}
-                                onClick={() => handleSelectLanguage(lang)}
-                                className="w-full text-left px-4 py-2 text-sm text-text hover:bg-glass-strong flex items-center"
-                            >
-                                <span role="img" aria-label={`${lang.name} flag`} className="mr-2">{lang.flag}</span>
-                                {lang.name}
-                            </button>
-                        ))}
-                    </div>
-                )}
+                <PlatformLanguageSwitcher />
             </div>
             <div className="flex justify-between items-center">
                 <label className="text-sm">Показывать имя</label>
