@@ -10,8 +10,8 @@ const Step = ({ number, title, children }) => (
 
 const HowItWorks = React.forwardRef((props, ref) => {
   return (
-    <section ref={ref} className="py-20 sm:py-32 mb-[-350px]">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <section ref={ref} className="py-20 sm:py-32">
+      <div className="container mx-auto w-[1240px] px-4 text-center">
         <h2 className="text-3xl sm:text-4xl font-bold mb-12 text-text">Начать просто</h2>
         <div className="grid md:grid-cols-3 gap-12 text-left max-w-5xl mx-auto relative z-10">
           <Step number="1" title="Подключите кошелёк">

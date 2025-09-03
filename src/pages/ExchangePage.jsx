@@ -24,9 +24,9 @@ const ExchangePage = () => {
     } else if (tab === 'futures') {
       setCurrentPair('BTC/USDT PERP');
     } else if (tab === 'options') {
-      setCurrentPair('BTC/USDT 29SEP24 C60000');
+      setCurrentPair('BINANCE:BTCUSDT'); // Generic crypto pair for options chart
     } else if (tab === 'assets') {
-      setCurrentPair('AAPL');
+      setCurrentPair('NASDAQ:AAPL'); // General stock example
     }
   };
 

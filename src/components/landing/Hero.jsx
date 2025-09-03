@@ -6,8 +6,8 @@ const Hero = React.forwardRef((props, ref) => {
   const [isModalOpen, setIsModalOpen] = React.useState(false);
 
   return (
-    <section ref={ref} className="py-20 sm:py-32 mt-10 min-h-screen mb-[-50px]">
-      <div className="container mx-auto flex flex-col lg:flex-row items-center justify-between gap-x-8 px-4">
+    <section ref={ref} className="py-20 sm:py-32 mt-10">
+      <div className="container mx-auto w-[1240px] flex flex-col lg:flex-row items-center justify-between gap-x-8 px-4">
         <div className="text-center lg:text-left lg:ml-16 xl:ml-32">
           <h1 className="text-4xl mobile:text-5xl sm:text-6xl font-extrabold text-text max-w-4xl">
             Будущее децентрализованных финансов. <span className="bg-accent-gradient bg-clip-text text-transparent">Уже здесь.</span>

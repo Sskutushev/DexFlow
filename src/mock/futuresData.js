@@ -11,7 +11,7 @@ export const mockFuturesPairs = [
   { id: 10, name: 'LTC/USDT PERP', price: '75.30', change24h: -1.5 },
   { id: 11, name: 'MATIC/USDT PERP', price: '0.72', change24h: -0.5 },
   { id: 12, name: 'SHIB/USDT PERP', price: '0.000025', change24h: 7.1 },
-  { id: 13, aame: 'BCH/USDT PERP', price: '450.00', change24h: 2.8 },
+  { id: 13, name: 'BCH/USDT PERP', price: '450.00', change24h: 2.8 },
   { id: 14, name: 'UNI/USDT PERP', price: '8.90', change24h: 1.1 },
   { id: 15, name: 'ICP/USDT PERP', price: '12.00', change24h: 6.0 },
   { id: 16, name: 'ETC/USDT PERP', price: '28.50', change24h: -0.9 },
