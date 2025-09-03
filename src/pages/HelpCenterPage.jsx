@@ -38,14 +38,14 @@ const HelpCenterPage = () => {
     );
 
     return (
-        <div className="container mx-auto py-24 px-4">
+        <div className="container mx-auto py-24 px-4 sm:px-6 lg:px-8">
             <div className="max-w-6xl mx-auto">
                 <div className="text-center mb-12">
                     <h1 className="text-4xl md:text-5xl font-bold text-text mb-4">Центр помощи</h1>
                     <p className="text-lg text-muted">Найдите ответы, руководства и новости.</p>
                 </div>
 
-                <div className="flex justify-center items-center mb-10 bg-glass p-2 rounded-lg space-x-2">
+                <div className="flex justify-center items-center mb-10 bg-glass p-2 rounded-lg space-x-2 overflow-x-auto custom-scrollbar">
                     <TabButton tabId={TABS.KNOWLEDGE_BASE} title="База знаний" />
                     <TabButton tabId={TABS.NEWS_AND_UPDATES} title="Новости и обновления" />
                     <TabButton tabId={TABS.VIDEO_TUTORIALS} title="Видеоуроки" />

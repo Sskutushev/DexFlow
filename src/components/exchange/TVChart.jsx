@@ -37,7 +37,7 @@ const TVChart = ({ pair }) => {
   }, [pair]);
 
   return (
-    <div className="bg-surface rounded-lg h-[800px] p-1">
+    <div className="bg-surface rounded-lg h-[400px] lg:h-[800px] p-1">
       <div id="tradingview_container" ref={container} className="h-full w-full" />
     </div>
   );

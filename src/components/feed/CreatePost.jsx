@@ -52,7 +52,7 @@ const CreatePost = () => {
       <div className="relative mb-2">
         <textarea 
           ref={textareaRef}
-          className="w-full bg-card p-2 rounded-md outline-none text-sm pr-10 resize-none" 
+          className="w-full bg-card p-2 rounded-md outline-none text-sm pr-10 resize-none"
           rows="3" 
           placeholder="Что нового?"
           value={postContent}
@@ -71,7 +71,7 @@ const CreatePost = () => {
           </svg>
         </button>
         {isEmojiPickerOpen && (
-          <div ref={emojiPickerRef} className="absolute top-full right-0 mt-2 bg-surface rounded-lg shadow-lg z-10 p-2 grid grid-cols-6 gap-1 max-h-64 overflow-y-auto custom-scrollbar">
+          <div ref={emojiPickerRef} className="absolute top-full right-0 mt-2 bg-surface rounded-lg shadow-lg z-10 p-2 grid grid-cols-6 sm:grid-cols-8 gap-1 max-h-64 overflow-y-auto custom-scrollbar">
             {emojis.map((emoji, index) => (
               <span 
                 key={index} 
@@ -84,8 +84,8 @@ const CreatePost = () => {
           </div>
         )}
       </div>
-      <div className="flex justify-between items-center mt-2">
-        <div className="flex space-x-2">
+      <div className="flex flex-col sm:flex-row justify-between items-center mt-2">
+        <div className="flex space-x-2 mb-2 sm:mb-0">
           {/* Attach file icon */}
           <button className="p-2 rounded-full hover:bg-glass-strong">
             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 text-muted" viewBox="0 0 20 20" fill="currentColor">
@@ -108,7 +108,7 @@ const CreatePost = () => {
         </div>
         <button 
           onClick={handlePost}
-          className="bg-primary-cyan/20 text-primary-cyan text-sm font-semibold py-2 px-4 rounded-lg hover:bg-primary-cyan/30 transition-colors"
+          className="bg-primary-cyan/20 text-primary-cyan text-sm font-semibold py-2 px-4 rounded-lg hover:bg-primary-cyan/30 transition-colors w-full sm:w-auto"
         >Опубликовать</button>
       </div>
     </div>

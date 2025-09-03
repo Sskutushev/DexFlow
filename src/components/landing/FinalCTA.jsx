@@ -6,11 +6,11 @@ const FinalCTA = React.forwardRef((props, ref) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   return (
-  <section ref={ref} className="py-20">
-      <div className="container mx-auto w-[1240px] flex items-center justify-between">
+  <section ref={ref} className="py-20 sm:py-32">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col lg:flex-row items-center justify-between">
         {/* Left Container: Text and Button */}
-        <div className="text-left max-w-xl">
-          <h2 className="text-4xl font-bold mb-6">Торговля криптоактивами доступная каждому</h2>
+        <div className="text-center lg:text-left max-w-xl">
+          <h2 className="text-4xl sm:text-5xl font-bold mb-6">Торговля криптоактивами доступная каждому</h2>
           <p className="text-muted mb-8">
             Начните свой путь в мире децентрализованных финансов с DexFlow. Наша платформа предлагает безопасную и простую торговлю криптоактивами, лучшие условия и круглосуточную поддержку. Присоединяйтесь к сообществу и откройте новые возможности.
           </p>
@@ -23,8 +23,8 @@ const FinalCTA = React.forwardRef((props, ref) => {
         </div>
 
         {/* Right Container: Image */}
-        <div className="flex-shrink-0">
-          <img src="/img/Frame 6851.svg" alt="Crypto Trading" className="w-[540px] h-[540px]" />
+        <div className="flex-shrink-0 mt-12 lg:mt-0">
+          <img src="/img/Frame 6851.svg" alt="Crypto Trading" className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl" />
         </div>
       </div>
       <ConnectWalletModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />

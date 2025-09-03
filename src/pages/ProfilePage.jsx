@@ -38,13 +38,13 @@ const ProfilePage = () => {
   );
 
   return (
-    <div className="container mx-auto py-24 px-4">
+    <div className="container mx-auto py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         {/* Profile Header */}
         <div className="bg-surface rounded-lg p-6 md:p-8 mb-8">
           <div className="flex flex-col md:flex-row items-center">
             <img src={user.avatar} alt={user.name} className="w-24 h-24 md:w-32 md:h-32 rounded-full mb-4 md:mb-0 md:mr-8" />
-            <div className="text-center md:text-left">
+            <div className="text-center md:text-left w-full">
               <h1 className="text-3xl font-bold text-text">{user.name}</h1>
               <div className="flex items-center justify-center md:justify-start text-muted font-mono text-sm my-2">
                 <span className="truncate">{user.address}</span>
@@ -56,14 +56,14 @@ const ProfilePage = () => {
                   )}
                 </button>
               </div>
-              <p className="text-muted mb-4 max-w-md">{user.bio}</p>
+              <p className="text-muted mb-4 max-w-md mx-auto md:mx-0">{user.bio}</p>
               <div className="flex justify-center md:justify-start space-x-4">
                 <button className="bg-accent-gradient text-white font-semibold py-2 px-6 rounded-lg hover:opacity-90 transition-opacity">Подписаться</button>
                 <button className="bg-glass-strong text-text font-semibold py-2 px-6 rounded-lg hover:bg-glass transition-colors">Сообщение</button>
               </div>
             </div>
           </div>
-          <div className="flex justify-around mt-8 pt-6 border-t border-glass-strong">
+          <div className="flex flex-wrap justify-around mt-8 pt-6 border-t border-glass-strong">
             <StatItem label="Посты" value={user.stats.posts} />
             <StatItem label="Подписчики" value={user.stats.followers} />
             <StatItem label="Подписки" value={user.stats.following} />
@@ -73,7 +73,7 @@ const ProfilePage = () => {
         {/* Tabs */}
         <div className="bg-surface rounded-lg">
           <div className="border-b border-glass-strong">
-            <nav className="flex space-x-2 px-4">
+            <nav className="flex space-x-2 px-4 overflow-x-auto custom-scrollbar">
               <TabButton tabId={TABS.POSTS} title="Посты" />
               <TabButton tabId={TABS.PORTFOLIO} title="Портфель" />
               <TabButton tabId={TABS.ACTIVITY} title="Активность" />
@@ -91,8 +91,8 @@ const ProfilePage = () => {
             {activeTab === TABS.PORTFOLIO && (
               <div className="space-y-3">
                 {user.portfolio.map(token => (
-                  <div key={token.id} className="flex items-center justify-between bg-glass p-3 rounded-lg">
-                    <div className="flex items-center">
+                  <div key={token.id} className="flex flex-col sm:flex-row items-center justify-between bg-glass p-3 rounded-lg">
+                    <div className="flex items-center mb-2 sm:mb-0">
                       <img src={token.icon} alt={token.name} className="w-8 h-8 rounded-full mr-4" />
                       <div>
                         <p className="font-bold text-text">{token.name}</p>
@@ -112,7 +112,7 @@ const ProfilePage = () => {
               <ul className="space-y-4">
                 {user.activity.map(act => (
                   <li key={act.id} className="flex items-center text-sm">
-                    <div className="bg-glass p-2 rounded-full mr-4">{act.type === 'SWAP' ? '🔄' : act.type === 'LIKE' ? '❤️' : act.type === 'FOLLOW' ? '👋' : '📄'}</div>
+                    <div className="bg-glass p-2 rounded-full mr-4 flex-shrink-0">{act.type === 'SWAP' ? '🔄' : act.type === 'LIKE' ? '❤️' : act.type === 'FOLLOW' ? '👋' : '📄'}</div>
                     <div>
                       <p className="text-text">{act.details}</p>
                       <p className="text-xs text-muted">{act.timestamp}</p>

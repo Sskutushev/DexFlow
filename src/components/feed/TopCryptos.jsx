@@ -36,7 +36,7 @@ const TopCryptos = () => {
   return (
     <div className="bg-surface rounded-lg p-4">
       <h3 className="text-lg font-bold mb-4 text-center">ТОП Криптовалют</h3>
-      <div className="grid grid-cols-2 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-4">
         {cryptoData.map((crypto) => (
           <CryptoCard key={crypto.id} crypto={crypto} />
         ))}

@@ -7,6 +7,13 @@ export default {
   darkMode: 'class', // Включаем поддержку тем через класс
   theme: {
     extend: {
+      screens: {
+        'mobile': '300px',
+        'sm': '550px',
+        'md': '800px',
+        'lg': '1000px',
+        'xl': '1280px',
+      },
       colors: {
         // Названия цветов соответствуют CSS переменным
         bg: 'var(--bg)',

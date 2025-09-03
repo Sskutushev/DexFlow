@@ -8,9 +8,9 @@ const VideoTutorials = () => {
   ];
 
   return (
-    <div className="bg-surface p-8 rounded-lg">
-      <h2 className="text-3xl font-bold mb-6 text-text">Видеоуроки</h2>
-      <div className="grid md:grid-cols-2 gap-6">
+    <div className="bg-surface p-4 sm:p-8 rounded-lg">
+      <h2 className="text-2xl sm:text-3xl font-bold mb-4 sm:mb-6 text-text">Видеоуроки</h2>
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
         {videos.map(video => (
           <a key={video.id} href={video.url} target="_blank" rel="noopener noreferrer" className="block bg-glass rounded-lg p-4 hover:bg-glass-strong transition-colors">
             <div className="aspect-video bg-card mb-3 rounded-md flex items-center justify-center">

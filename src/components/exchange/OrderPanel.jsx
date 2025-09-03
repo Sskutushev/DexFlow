@@ -15,7 +15,7 @@ const OrderPanel = ({ pair, isLoggedIn }) => {
   };
 
   return (
-    <div className="bg-surface rounded-lg p-4 flex flex-col h-full">
+    <div className="bg-surface rounded-lg p-4 flex flex-col h-auto lg:h-full">
       <h2 className="text-lg font-bold mb-4">Обмен {pair}</h2>
       <div className="space-y-4 flex-grow overflow-y-auto custom-scrollbar pr-2">
         <div>
@@ -69,7 +69,7 @@ const OrderPanel = ({ pair, isLoggedIn }) => {
         {/* Slippage Tolerance */}
         <div className="mb-4">
           <label className="text-sm text-muted mb-2 block">Уровень проскальзывания</label>
-          <div className="flex items-center space-x-2">
+          <div className="flex flex-wrap items-center space-x-2">
             <input
               type="number"
               step="0.1"
@@ -81,19 +81,19 @@ const OrderPanel = ({ pair, isLoggedIn }) => {
             />
             <span className="text-lg font-semibold">%</span>
             <button
-              className="px-3 py-1 rounded-md bg-card text-sm font-medium hover:bg-glass-strong"
+              className="px-3 py-1 rounded-md bg-card text-sm font-medium hover:bg-glass-strong mt-2 sm:mt-0"
               onClick={() => setSlippage(1)}
             >
               1%
             </button>
             <button
-              className="px-3 py-1 rounded-md bg-card text-sm font-medium hover:bg-glass-strong"
+              className="px-3 py-1 rounded-md bg-card text-sm font-medium hover:bg-glass-strong mt-2 sm:mt-0"
               onClick={() => setSlippage(3)}
             >
               3%
             </button>
             <button
-              className="px-3 py-1 rounded-md bg-card text-sm font-medium hover:bg-glass-strong"
+              className="px-3 py-1 rounded-md bg-card text-sm font-medium hover:bg-glass-strong mt-2 sm:mt-0"
               onClick={() => setSlippage(5)}
             >
               5%

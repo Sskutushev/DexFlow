@@ -27,15 +27,15 @@ const FeedPage = () => {
   );
 
   return (
-    <div className="container mx-auto py-24 min-h-screen"> {/* Added container and padding */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8"> {/* 3-column grid */}
+    <div className="container mx-auto py-24 px-4 sm:px-6 lg:px-8 min-h-screen">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
         {/* Left Column: Ad Banners */}
-        <div className="lg:col-span-2">
+        <div className="lg:col-span-2 order-last lg:order-first">
           <AdBanners />
         </div>
 
         {/* Center Column: Feed Content */}
-        <div className="lg:col-span-7"> {/* Adjusted span for center content */}
+        <div className="lg:col-span-7">
           <CreatePost />
           <div className="mt-8 mb-4 flex justify-center space-x-2">
             <TabButton tabId="popular" title="Популярное" />

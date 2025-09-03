@@ -12,7 +12,7 @@ const AdBanner = ({ index }) => {
   const currentGradient = gradients[index % gradients.length];
 
   return (
-    <div className={`w-48 h-24 rounded-lg flex items-center justify-center text-white text-sm font-bold bg-gradient-to-br ${currentGradient}`}>
+    <div className={`w-full h-24 rounded-lg flex items-center justify-center text-white text-sm font-bold bg-gradient-to-br ${currentGradient}`}>
       Реклама {index + 1}
     </div>
   );

@@ -8,6 +8,7 @@ import FeedPage from './pages/FeedPage';
 import ProfilePage from './pages/ProfilePage';
 import HelpCenterPage from './pages/HelpCenterPage';
 import ConnectWalletModal from './components/common/ConnectWalletModal';
+import ScrollToTopButton from './components/common/ScrollToTopButton'; // New import
 
 const AppContent = () => {
   const location = useLocation();
@@ -31,6 +32,7 @@ const AppContent = () => {
         </Routes>
       </main>
       <ConnectWalletModal isOpen={isWalletModalOpen} onClose={() => setWalletModalOpen(false)} />
+      <ScrollToTopButton /> {/* New component */}
     </div>
   );
 }

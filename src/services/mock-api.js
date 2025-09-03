@@ -31,7 +31,7 @@ const mockPosts = [
     timestamp: '2 часа назад',
     content: 'BTC готовится к новому рывку! Луна не предел. 🚀',
     likes: 125, views: 1200,
-    image: '/img/Account.svg', // Using a local image
+    image: '/img/Account.svg',
   },
   {
     id: 2, type: 'popular',
@@ -39,7 +39,7 @@ const mockPosts = [
     timestamp: '5 часов назад',
     content: 'Не забывайте про диверсификацию. Альткоины показывают силу, особенно в секторе AI.',
     likes: 88, views: 950,
-    image: '/img/453ц 1.svg', // Using a local image
+    image: '/img/453ц 1.svg',
   },
   {
     id: 3, type: 'popular',
@@ -55,7 +55,7 @@ const mockPosts = [
     timestamp: '1 день назад',
     content: 'Рынок сегодня очень волатилен. Будьте осторожны с плечами!',
     likes: 50, views: 700,
-    image: '/img/_more_.svg', // Using a local image
+    image: '/img/_more_.svg',
   },
   {
     id: 11, type: 'popular',
