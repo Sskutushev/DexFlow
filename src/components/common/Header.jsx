@@ -68,6 +68,7 @@ const Header = () => {
             <NavLink to="/exchange" className={({ isActive }) => `text-sm font-medium ${isActive ? 'text-text' : 'text-muted hover:text-text'}`}>Торговать</NavLink>
             <NavLink to="/feed" className={({ isActive }) => `text-sm font-medium ${isActive ? 'text-text' : 'text-muted hover:text-text'}`}>Лента</NavLink>
             <NavLink to="/help" className={({ isActive }) => `text-sm font-medium ${isActive ? 'text-text' : 'text-muted hover:text-text'}`}>Помощь</NavLink>
+            <NavLink to="/copy-trading" className={({ isActive }) => `text-sm font-medium ${isActive ? 'text-text' : 'text-muted hover:text-text'}`}>Копирование сделок</NavLink>
           </nav>
 
           {/* Right side: Desktop Icons and Profile (always visible) */}
@@ -143,6 +144,7 @@ const Header = () => {
             <NavLink to="/exchange" onClick={toggleMobileMenu} className="text-lg font-medium text-text hover:text-primary-cyan">Торговать</NavLink>
             <NavLink to="/feed" onClick={toggleMobileMenu} className="text-lg font-medium text-text hover:text-primary-cyan">Лента</NavLink>
             <NavLink to="/help" onClick={toggleMobileMenu} className="text-lg font-medium text-text hover:text-primary-cyan">Помощь</NavLink>
+            <NavLink to="/copy-trading" onClick={toggleMobileMenu} className="text-lg font-medium text-text hover:text-primary-cyan">Копирование сделок</NavLink>
           </nav>
         </div>
       )}

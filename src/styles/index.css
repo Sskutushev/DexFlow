@@ -44,3 +44,34 @@ body {
   -moz-osx-font-smoothing: grayscale;
   transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+/* Custom Slider Styles */
+.slider-thumb::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  background: var(--primary-cyan);
+  cursor: pointer;
+  border-radius: 50%;
+  border: 3px solid var(--surface);
+  transition: background-color 0.2s ease;
+}
+
+.slider-thumb::-moz-range-thumb {
+  width: 20px;
+  height: 20px;
+  background: var(--primary-cyan);
+  cursor: pointer;
+  border-radius: 50%;
+  border: 3px solid var(--surface);
+  transition: background-color 0.2s ease;
+}
+
+.slider-thumb:hover::-webkit-slider-thumb {
+    background: var(--primary-violet);
+}
+
+.slider-thumb:hover::-moz-range-thumb {
+    background: var(--primary-violet);
+}

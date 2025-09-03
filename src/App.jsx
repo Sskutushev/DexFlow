@@ -11,6 +11,8 @@ import HomePage from './pages/HomePage'; // New import
 import ConnectWalletModal from './components/common/ConnectWalletModal';
 import ScrollToTopButton from './components/common/ScrollToTopButton'; // New import
 
+import CopyTradingPage from './pages/CopyTradingPage'; // New import
+
 const AppContent = () => {
   const location = useLocation();
   const [isWalletModalOpen, setWalletModalOpen] = useState(false);
@@ -31,6 +33,7 @@ const AppContent = () => {
           <Route path="/feed" element={<FeedPage />} />
           <Route path="/profile/:address" element={<ProfilePage />} />
           <Route path="/help" element={<HelpCenterPage />} />
+          <Route path="/copy-trading" element={<CopyTradingPage />} /> {/* New Route */}
         </Routes>
       </main>
       <ConnectWalletModal isOpen={isWalletModalOpen} onClose={() => setWalletModalOpen(false)} />
