@@ -94,7 +94,7 @@ const ProfileDropdown = ({ isVisible }) => {
                     </button>
                 </div>
                 <div className="flex items-center mb-2">
-                    <img src="/Avatar 5.svg" alt="User Avatar" className="w-10 h-10 rounded-full mr-3" />
+                    <img src={import.meta.env.BASE_URL + "Avatar 5.svg"} alt="User Avatar" className="w-10 h-10 rounded-full mr-3" />
                     <div>
                         <p className="font-semibold text-sm text-text">ID: 123456</p>
                         <p className="text-xs text-muted">0xabc...def</p>
@@ -102,7 +102,7 @@ const ProfileDropdown = ({ isVisible }) => {
                 </div>
                 <div className="flex items-center justify-between bg-glass p-3 rounded-lg">
                     <div className="flex items-center">
-                        <img src="/assets/icons/ic-wallet.svg" alt="USDT" className="w-6 h-6 mr-2" />
+                        <img src={import.meta.env.BASE_URL + "assets/icons/ic-wallet.svg"} alt="USDT" className="w-6 h-6 mr-2" />
                         <span className="text-sm text-muted">Баланс:</span>
                         {/* Info icon and tooltip */}
                         <div

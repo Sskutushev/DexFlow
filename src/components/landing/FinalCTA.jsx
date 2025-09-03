@@ -24,7 +24,7 @@ const FinalCTA = React.forwardRef((props, ref) => {
 
         {/* Right Container: Image */}
         <div className="flex-shrink-0 mt-12 lg:mt-0">
-          <img src="/img/Frame 6851.svg" alt="Crypto Trading" className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl" />
+          <img src={import.meta.env.BASE_URL + "img/Frame 6851.svg"} alt="Crypto Trading" className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl" />
         </div>
       </div>
       <ConnectWalletModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />

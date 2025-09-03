@@ -1,20 +1,12 @@
 import React, { useState, useRef, useEffect } from 'react';
-import RuFlag from '/assets/icons/flags/ru.svg';
-import UkFlag from '/assets/icons/flags/uk.svg';
-import EnFlag from '/assets/icons/flags/en.svg';
-import EsFlag from '/assets/icons/flags/es.svg';
-import FrFlag from '/assets/icons/flags/fr.svg';
-import DeFlag from '/assets/icons/flags/de.svg';
-import ZhFlag from '/assets/icons/flags/zh.svg';
-
 export const languages = [
-    { code: 'ru', name: 'Русский', flag: RuFlag },
-    { code: 'uk', name: 'Українська', flag: UkFlag },
-    { code: 'en', name: 'English', flag: EnFlag },
-    { code: 'es', name: 'Español', flag: EsFlag },
-    { code: 'fr', name: 'Français', flag: FrFlag },
-    { code: 'de', name: 'Deutsch', flag: DeFlag },
-    { code: 'zh', name: '中文', flag: ZhFlag },
+    { code: 'ru', name: 'Русский', flag: import.meta.env.BASE_URL + 'assets/icons/flags/ru.svg' },
+    { code: 'uk', name: 'Українська', flag: import.meta.env.BASE_URL + 'assets/icons/flags/uk.svg' },
+    { code: 'en', name: 'English', flag: import.meta.env.BASE_URL + 'assets/icons/flags/en.svg' },
+    { code: 'es', name: 'Español', flag: import.meta.env.BASE_URL + 'assets/icons/flags/es.svg' },
+    { code: 'fr', name: 'Français', flag: import.meta.env.BASE_URL + 'assets/icons/flags/fr.svg' },
+    { code: 'de', name: 'Deutsch', flag: import.meta.env.BASE_URL + 'assets/icons/flags/de.svg' },
+    { code: 'zh', name: '中文', flag: import.meta.env.BASE_URL + 'assets/icons/flags/zh.svg' },
 ];
 
 const LanguageSwitcher = () => {

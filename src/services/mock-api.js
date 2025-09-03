@@ -31,7 +31,7 @@ const mockPosts = [
     timestamp: '2 часа назад',
     content: 'BTC готовится к новому рывку! Луна не предел. 🚀',
     likes: 125, views: 1200,
-    image: '/img/Account.svg',
+    image: import.meta.env.BASE_URL + 'img/Account.svg',
   },
   {
     id: 2, type: 'popular',
@@ -39,7 +39,7 @@ const mockPosts = [
     timestamp: '5 часов назад',
     content: 'Не забывайте про диверсификацию. Альткоины показывают силу, особенно в секторе AI.',
     likes: 88, views: 950,
-    image: '/img/453ц 1.svg',
+    image: import.meta.env.BASE_URL + 'img/453ц 1.svg',
   },
   {
     id: 3, type: 'popular',
@@ -55,7 +55,7 @@ const mockPosts = [
     timestamp: '1 день назад',
     content: 'Рынок сегодня очень волатилен. Будьте осторожны с плечами!',
     likes: 50, views: 700,
-    image: '/img/_more_.svg',
+    image: import.meta.env.BASE_URL + 'img/_more_.svg',
   },
   {
     id: 11, type: 'popular',
@@ -63,7 +63,7 @@ const mockPosts = [
     timestamp: '2 дня назад',
     content: 'Изучаю новые протоколы Layer 2. Какие проекты посоветуете?',
     likes: 70, views: 900,
-    image: '/img/1672306520_kalix-club-p-kosmos-zastavka-na-aifon-krasivo-49 1.svg',
+    image: import.meta.env.BASE_URL + 'img/1672306520_kalix-club-p-kosmos-zastavka-na-aifon-krasivo-49 1.svg',
   },
   {
     id: 12, type: 'popular',
@@ -71,7 +71,7 @@ const mockPosts = [
     timestamp: '3 дня назад',
     content: 'Моя новая коллекция NFT уже на OpenSea! Зацените.',
     likes: 180, views: 2000,
-    image: '/img/3452 1.png',
+    image: import.meta.env.BASE_URL + 'img/3452 1.png',
   },
   {
     id: 13, type: 'popular',
@@ -79,7 +79,7 @@ const mockPosts = [
     timestamp: '4 дня назад',
     content: 'Продал все свои шиткоины, перешел в стейблы. Жду коррекции.',
     likes: 30, views: 500,
-    image: '/img/56е43 1.svg',
+    image: import.meta.env.BASE_URL + 'img/56е43 1.svg',
   },
   {
     id: 14, type: 'popular',
@@ -87,7 +87,7 @@ const mockPosts = [
     timestamp: '5 дней назад',
     content: 'Долгосрочные инвестиции в BTC и ETH - лучшая стратегия.',
     likes: 250, views: 3000,
-    image: '/img/--------.svg',
+    image: import.meta.env.BASE_URL + 'img/--------.svg',
   },
   {
     id: 15, type: 'popular',
@@ -95,7 +95,7 @@ const mockPosts = [
     timestamp: '6 дней назад',
     content: 'Последние новости из мира криптовалют: регуляция и инновации.',
     likes: 100, views: 1500,
-    image: '/img/-------------- (1).svg',
+    image: import.meta.env.BASE_URL + 'img/-------------- (1).svg',
   },
   {
     id: 16, type: 'popular',
@@ -103,7 +103,7 @@ const mockPosts = [
     timestamp: '7 дней назад',
     content: 'Моя ферма работает на полную мощность! Кто еще майнит?',
     likes: 60, views: 800,
-    image: '/img/-------------- (2).svg',
+    image: import.meta.env.BASE_URL + 'img/-------------- (2).svg',
   },
 
   // Hot posts (10 posts)
@@ -113,7 +113,7 @@ const mockPosts = [
     timestamp: '30 минут назад',
     content: 'Только что развернул новый смарт-контракт на Polygon. Газ копейки!',
     likes: 50, views: 300,
-    image: '/img/_more_1.svg',
+    image: import.meta.env.BASE_URL + 'img/_more_1.svg',
   },
   {
     id: 5, type: 'hot',
@@ -121,7 +121,7 @@ const mockPosts = [
     timestamp: '1 час назад',
     content: 'Приобрел редкий NFT из коллекции "PixelPunks"! #NFT #DigitalArt',
     likes: 75, views: 400,
-    image: '/img/_more_2.svg',
+    image: import.meta.env.BASE_URL + 'img/_more_2.svg',
   },
   {
     id: 8, type: 'hot',
@@ -129,7 +129,7 @@ const mockPosts = [
     timestamp: '2 часа назад',
     content: 'Шорчу DOGE, кто со мной? 📉',
     likes: 15, views: 100,
-    image: '/img/_more_3.svg',
+    image: import.meta.env.BASE_URL + 'img/_more_3.svg',
   },
   {
     id: 17, type: 'hot',
@@ -137,7 +137,7 @@ const mockPosts = [
     timestamp: '3 часа назад',
     content: 'Новая стратегия фарминга на BSC. Высокий APR, но есть риски.',
     likes: 40, views: 250,
-    image: '/img/_more_5.svg',
+    image: import.meta.env.BASE_URL + 'img/_more_5.svg',
   },
   {
     id: 18, type: 'hot',
@@ -145,7 +145,7 @@ const mockPosts = [
     timestamp: '4 часа назад',
     content: 'Технический анализ BTC показывает сильное сопротивление на $70k.',
     likes: 90, views: 600,
-    image: '/img/----------------------.svg',
+    image: import.meta.env.BASE_URL + 'img/----------------------.svg',
   },
   {
     id: 19, type: 'hot',
@@ -153,7 +153,7 @@ const mockPosts = [
     timestamp: '5 часов назад',
     content: 'Разрабатываю новый DApp для кредитования. Скоро бета-тест!',
     likes: 65, views: 350,
-    image: '/img/---------------------- 1.svg',
+    image: import.meta.env.BASE_URL + 'img/---------------------- 1.svg',
   },
   {
     id: 20, type: 'hot',
@@ -161,7 +161,7 @@ const mockPosts = [
     timestamp: '6 часов назад',
     content: 'Нашел гем! Новый токен с низкой капитализацией и огромным потенциалом.',
     likes: 110, views: 800,
-    image: '/img/-------------------------------------------------- (2) 2.svg',
+    image: import.meta.env.BASE_URL + 'img/-------------------------------------------------- (2) 2.svg',
   },
   {
     id: 21, type: 'hot',
@@ -169,7 +169,7 @@ const mockPosts = [
     timestamp: '7 часов назад',
     content: 'Играю в Axie Infinity. Кто хочет сразиться?',
     likes: 30, views: 200,
-    image: '/img/-------------------------------------------------- (2) 2 (1).svg',
+    image: import.meta.env.BASE_URL + 'img/-------------------------------------------------- (2) 2 (1).svg',
   },
   {
     id: 22, type: 'hot',
@@ -177,7 +177,7 @@ const mockPosts = [
     timestamp: '8 часов назад',
     content: 'Участвую в голосовании по новому предложению в DAO. Важен каждый голос!',
     likes: 25, views: 180,
-    image: '/img/2345к23 1.svg',
+    image: import.meta.env.BASE_URL + 'img/2345к23 1.svg',
   },
   {
     id: 23, type: 'hot',
@@ -195,7 +195,7 @@ const mockPosts = [
     timestamp: '10 минут назад',
     content: 'Обсуждаем будущее DAO и их роль в управлении децентрализованными проектами.',
     likes: 20, views: 150,
-    image: '/img/Account.svg',
+    image: import.meta.env.BASE_URL + 'img/Account.svg',
   },
   {
     id: 7, type: 'trending',
@@ -203,7 +203,7 @@ const mockPosts = [
     timestamp: '45 минут назад',
     content: 'Новая фарминг-стратегия на Curve Finance. Доходность 200% APY!',
     likes: 35, views: 250,
-    image: '/img/453ц 1.svg',
+    image: import.meta.env.BASE_URL + 'img/453ц 1.svg',
   },
   {
     id: 9, type: 'trending',
@@ -211,7 +211,7 @@ const mockPosts = [
     timestamp: '1 час назад',
     content: 'Строю свой первый участок земли в Decentraland. Какие идеи для застройки?',
     likes: 40, views: 200,
-    image: '/img/_more_.svg',
+    image: import.meta.env.BASE_URL + 'img/_more_.svg',
   },
   {
     id: 24, type: 'trending',
@@ -219,7 +219,7 @@ const mockPosts = [
     timestamp: '2 часа назад',
     content: 'Интеграция AI и блокчейна: новые возможности и вызовы.',
     likes: 55, views: 300,
-    image: '/img/1672306520_kalix-club-p-kosmos-zastavka-na-aifon-krasivo-49 1.svg',
+    image: import.meta.env.BASE_URL + 'img/1672306520_kalix-club-p-kosmos-zastavka-na-aifon-krasivo-49 1.svg',
   },
   {
     id: 25, type: 'trending',
@@ -227,7 +227,7 @@ const mockPosts = [
     timestamp: '3 часа назад',
     content: 'LayerZero - это будущее кроссчейн-коммуникаций. Согласны?',
     likes: 70, views: 400,
-    image: '/img/3452 1.png',
+    image: import.meta.env.BASE_URL + 'img/3452 1.png',
   },
   {
     id: 26, type: 'trending',
@@ -235,7 +235,7 @@ const mockPosts = [
     timestamp: '4 часа назад',
     content: 'ZK-Rollups меняют правила игры для масштабирования Ethereum.',
     likes: 45, views: 280,
-    image: '/img/56е43 1.svg',
+    image: import.meta.env.BASE_URL + 'img/56е43 1.svg',
   },
   {
     id: 27, type: 'trending',
@@ -243,7 +243,7 @@ const mockPosts = [
     timestamp: '5 часов назад',
     content: 'GameFi проекты, за которыми стоит следить в 2025 году.',
     likes: 60, views: 350,
-    image: '/img/--------.svg',
+    image: import.meta.env.BASE_URL + 'img/--------.svg',
   },
   {
     id: 28, type: 'trending',
@@ -251,7 +251,7 @@ const mockPosts = [
     timestamp: '6 часов назад',
     content: 'Real World Assets (RWA) на блокчейне: революция в финансах.',
     likes: 80, views: 450,
-    image: '/img/-------------- (1).svg',
+    image: import.meta.env.BASE_URL + 'img/-------------- (1).svg',
   },
   {
     id: 29, type: 'trending',
@@ -259,7 +259,7 @@ const mockPosts = [
     timestamp: '7 часов назад',
     content: 'Разрабатываю новый проект на Solana. Скорость транзакций поражает!',
     likes: 50, views: 320,
-    image: '/img/-------------- (2).svg',
+    image: import.meta.env.BASE_URL + 'img/-------------- (2).svg',
   },
   {
     id: 30, type: 'trending',
@@ -273,9 +273,6 @@ const mockPosts = [
 
 export const getMarketPairs = () => mockPairs;
 export const getPosts = (type = 'popular') => {
-  if (type === 'all') return mockPosts; // Optional: return all posts
-  return mockPosts.filter(post => post.type === type);
-
   if (type === 'all') return mockPosts; // Optional: return all posts
   return mockPosts.filter(post => post.type === type);
 };

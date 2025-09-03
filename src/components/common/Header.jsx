@@ -98,7 +98,7 @@ const Header = () => {
             {isLoggedIn ? (
               <div className="relative" ref={profileRef}>
                 <button onClick={toggleProfile} className="flex items-center space-x-2 bg-glass p-1 pr-3 rounded-full">
-                  <img src="/Avatar 5.svg" alt="User Avatar" className="w-8 h-8 rounded-full" />
+                  <img src={import.meta.env.BASE_URL + "Avatar 5.svg"} alt="User Avatar" className="w-8 h-8 rounded-full" />
                   <span className="text-xs font-mono">ID: 123456</span>
                 </button>
                 <ProfileDropdown isVisible={isProfileOpen} />

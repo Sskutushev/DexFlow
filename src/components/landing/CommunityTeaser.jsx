@@ -10,7 +10,7 @@ const CommunityTeaser = React.forwardRef((props, ref) => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 pt-[150px] flex flex-col lg:flex-row items-center justify-between">
         {/* Left Container: Image */}
         <div className="w-full lg:w-1/2 flex items-center justify-center">
-          <img src="/img/Frame 6852.svg" alt="Community" className="max-w-full max-h-full object-contain" />
+          <img src={import.meta.env.BASE_URL + "img/Frame 6852.svg"} alt="Community" className="max-w-full max-h-full object-contain" />
         </div>
 
         {/* Right Container: Text and Button */}

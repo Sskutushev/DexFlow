@@ -23,7 +23,7 @@ const Hero = React.forwardRef((props, ref) => {
           </button>
         </div>
         <div className="flex-shrink-0 mt-12 lg:mt-0">
-          <img src="/Frame 6850.svg" alt="Hero Illustration" className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl" />
+          <img src={import.meta.env.BASE_URL + "Frame 6850.svg"} alt="Hero Illustration" className="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl" />
         </div>
       </div>
       <ConnectWalletModal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} />

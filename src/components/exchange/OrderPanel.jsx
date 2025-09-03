@@ -42,7 +42,7 @@ const OrderPanel = ({ pair, isLoggedIn }) => {
         </div>
         <div className="flex justify-center">
           <button onClick={handleSwap} className="p-2 rounded-full border border-glass-strong hover:bg-glass-strong">
-            <img src="/img/стрелки.png" alt="Swap arrows" className="h-5 w-5" />
+            <img src={import.meta.env.BASE_URL + "img/стрелки.png"} alt="Swap arrows" className="h-5 w-5" />
           </button>
         </div>
         <div>
