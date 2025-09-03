@@ -2,7 +2,7 @@ import React from 'react';
 
 const NewFeaturesSection = () => {
   return (
-    <section className="py-20 bg-surface rounded-xl shadow-lg">
+    <section className="py-20 rounded-xl shadow-lg">
       <div className="container mx-auto w-[1240px] px-4 text-center">
         <h2 className="text-3xl font-bold text-text mb-10">Расширьте свои торговые возможности с DexFlow</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
